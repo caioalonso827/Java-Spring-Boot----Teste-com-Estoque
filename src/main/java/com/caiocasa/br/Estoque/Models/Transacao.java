@@ -12,7 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -23,7 +23,7 @@ public class Transacao {
     @Column(name="id_transacao")
     private Integer idTrasacao;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name="id_produto")
     private Produto produto;
 
